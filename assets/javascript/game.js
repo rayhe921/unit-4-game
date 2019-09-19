@@ -7,10 +7,6 @@ var random;
 var userScore = 0;
 var crystalNum = [];
 
-// score value
-
-$("winValue").text("Wins: " + winCount);
-$("loseValue").text("Losses: " + loseCount);
 
 // Number Generators
 
@@ -41,6 +37,8 @@ $("#button1").on("click", function () {
     userScore = userScore + crystal1;
     console.log(userScore);
     $("#scoreNum").text("User Score: " + userScore);
+    condition();
+    $("#randomNum").text("Goal: " + random)
 });
 
 $("#button2").on("click", function () {
@@ -49,6 +47,8 @@ $("#button2").on("click", function () {
     userScore = userScore + crystal2;
     console.log(userScore);
     $("#scoreNum").text("User Score: " + userScore);
+    condition();
+    $("#randomNum").text("Goal: " + random)
 });
 
 $("#button3").on("click", function () {
@@ -57,6 +57,8 @@ $("#button3").on("click", function () {
     userScore = userScore + crystal3;
     console.log(userScore);
     $("#scoreNum").text("User Score: " + userScore);
+    condition();
+    $("#randomNum").text("Goal: " + random)
 });
 
 $("#button4").on("click", function () {
@@ -65,11 +67,34 @@ $("#button4").on("click", function () {
     userScore = userScore + crystal4;
     console.log(userScore);
     $("#scoreNum").text("User Score: " + userScore);
+    condition();
+    $("#randomNum").text("Goal: " + random)
 });
 
 // Win and loss condition
 
-if (userScore === random) {
-    winCount++;
-        
-}
+function condition(){
+    
+    if (userScore === random) {
+        winCount++;
+        $("#winValue").text("Wins: " + winCount);
+        console.log(winCount);
+        reset();
+            }
+    else if (userScore >= random) {
+        loseCount++;
+        $("#loseValue").text("Losses: " + loseCount);
+        console.log(loseCount);
+        reset();    
+    }
+};
+
+// reset
+
+function reset(){
+    crystalNum = [];
+    randomNumber();
+    crystalValue();
+    userScore = 0;
+    $("#scoreNum").text("User Score: " + userScore);
+};
