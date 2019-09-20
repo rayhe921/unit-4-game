@@ -15,26 +15,39 @@
     <h1>Crystal Collector!</h1>
 
     <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut blandit at lectus vel pellentesque. Quisque eleifend
-        egestas nulla, ac tincidunt leo. Nam sodales sem sed felis laoreet, vel commodo lectus auctor. Nullam eget
-        elementum nisi, sed blandit libero. Curabitur mauris lorem, consectetur quis ullamcorper vitae, tristique non
-        neque. Sed euismod imperdiet libero. Nunc consequat tincidunt aliquam. Sed accumsan quam sed arcu porttitor
-        consequat.
+        Click one of the four crystals to reveal a random goal number.
+        <br>
+        Each crystal is given a random value. Click on each crystal to add to your score.
+        <br>
+        Try to match your score with the goal number. 
+        <br>
+        If you can match you win! If you go over you Lose! 
     </p>
 
-    <div id="randomNum">Goal Number</div>
-    <div>
+    <div class="card" style="width: 18rem;">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item liststyle"><div id="randomNum">Goal Number</div></li>
+          <li class="list-group-item liststyle"><div id="winValue">Wins: </div></li>
+          <li class="list-group-item liststyle"><div id="loseValue">Losses: </div></li>
+        </ul>
+      </div>
+        <!-- <div id="randomNum">Goal Number</div>
         <div id="winValue">Wins: </div>
-        <div id="loseValue">Losses: </div>
-    </div>
+        <div id="loseValue">Losses: </div> -->
+    
     <button id="button1"><img src="assets/images/firestone.png" alt="Crystal 1"></button>
     <button id="button2"><img src="assets/images/moonstone.png" alt="Crystal 2"></button>
     <button id="button3"><img src="assets/images/thunderstone.png" alt="Crystal 3"></button>
     <button id="button4"><img src="assets/images/waterstone.png" alt="Crystal 4"></button>
-    <div>
+    <!-- <div>
         <p>Total Score:</p>
     </div>
-    <div id="scoreNum"></div>
+    <div id="scoreNum"></div> -->
+    <div class="card" style="width: 18rem;">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item liststyle" id="scoreNum">Total Score:</li>
+        </ul>
+      </div>
     <script type="text/javascript" src="assets/javascript/game.js"></script>
 </body>
 

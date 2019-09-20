@@ -36,7 +36,7 @@ $("#button1").on("click", function () {
     crystal1 = crystalNum[0];
     userScore = userScore + crystal1;
     console.log(userScore);
-    $("#scoreNum").text("User Score: " + userScore);
+    $("#scoreNum").text("Total Score: " + userScore);
     condition();
     $("#randomNum").text("Goal: " + random)
 });
@@ -46,7 +46,7 @@ $("#button2").on("click", function () {
     crystal2 = crystalNum[1];
     userScore = userScore + crystal2;
     console.log(userScore);
-    $("#scoreNum").text("User Score: " + userScore);
+    $("#scoreNum").text("Total Score: " + userScore);
     condition();
     $("#randomNum").text("Goal: " + random)
 });
@@ -56,7 +56,7 @@ $("#button3").on("click", function () {
     crystal3 = crystalNum[2];
     userScore = userScore + crystal3;
     console.log(userScore);
-    $("#scoreNum").text("User Score: " + userScore);
+    $("#scoreNum").text("Total Score: " + userScore);
     condition();
     $("#randomNum").text("Goal: " + random)
 });
@@ -66,7 +66,7 @@ $("#button4").on("click", function () {
     crystal4 = crystalNum[3];
     userScore = userScore + crystal4;
     console.log(userScore);
-    $("#scoreNum").text("User Score: " + userScore);
+    $("#scoreNum").text("Total Score: " + userScore);
     condition();
     $("#randomNum").text("Goal: " + random)
 });
@@ -96,5 +96,5 @@ function reset(){
     randomNumber();
     crystalValue();
     userScore = 0;
-    $("#scoreNum").text("User Score: " + userScore);
+    $("#scoreNum").text("Total Score: " + userScore);
 };
